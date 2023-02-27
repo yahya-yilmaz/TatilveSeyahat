@@ -1,0 +1,20 @@
+﻿@using TatilveSeyahat.Models.Classlar
+@model List<Hakkimizda>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_UserLayout.cshtml";
+}
+<div class="content">
+    <div class="wrap">
+        <div class="about">
+            <h3>Hakkımızda</h3>
+
+            @foreach (var item in Model)
+            {
+                <img src=@item.ResimURL alt="" />
+                <p>@item.Acilklama</p>
+            }
+
+        </div>
+    </div>
+</div>
